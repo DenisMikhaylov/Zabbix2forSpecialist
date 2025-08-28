@@ -20,15 +20,15 @@
 Имена пользователей и пароли:
 ```
 Для denian
-login: student 
+login: sa 
 password: 111
 login: root 
 password: 111
 ```
 ```
 Для Windows
-login: Student 
-password: password
+login: Administrator 
+password: Pa$$w0rd
 ```
 ### **Практическая работа**
 
@@ -50,7 +50,7 @@ nano /etc/default/isc-dhcp-server
 ```
 
 ```
-INTERFACESv4="enp0s8"
+INTERFACESv4="eth1"
 ```
 
 ### **Задача 3: Настройка Scope для DHCP**
@@ -67,7 +67,7 @@ shared-network LAN1 {
   subnet 192.168.10.0 netmask 255.255.255.0 {
     range 192.168.10.101 192.168.10.128;
     option routers 192.168.10.1;
-    option domain-name "corp.local";
+    option domain-name "corp.loc";
     option domain-name-servers 192.168.10.1;
     default-lease-time 600;
     max-lease-time 7200;
