@@ -28,7 +28,7 @@ password: 111
 ```
 Для Windows
 login: administrator 
-password: password
+password: Pa$$w0rd
 ```
 ### **Практическая работа**
 
@@ -105,14 +105,14 @@ nameserver 127.0.0.1
 nano /etc/bind/named.conf.local
 ```
 ```
-zone "corp.local" {
+zone "corp.loc" {
         type master;
-        file "/etc/bind/corp.local";
+        file "/etc/bind/corp.loc";
 };
 ```
 12. Создание файла zone
 ```
-nano /etc/bind/corp.local
+nano /etc/bind/corp.loc
 ```
 ```
 $TTL    3h
@@ -122,6 +122,8 @@ $TTL    3h
          MX  10  gate
 gate     A   192.168.10.1
 server   A   192.168.10.10
+winserver A  192.168.10.20
+debian   A   192.168.10.30
 
 
 ```
@@ -130,7 +132,7 @@ server   A   192.168.10.10
 
 ```
 # named-checkconf -z
-# named-checkzone corp.ru /etc/bind/corp.ru
+# named-checkzone corp.loc /etc/bind/corp.loc
 ```
 14. Перезапуск слыжбы
 ```
