@@ -178,7 +178,7 @@ sysctl -w net.ipv4.ip_forward=1
 
 Редактируем файл 
 ```
-nano /etc/apt/source.list
+nano /etc/apt/sources.list
 ```
 добавить решетку перед строкой с CDROM
 ```
