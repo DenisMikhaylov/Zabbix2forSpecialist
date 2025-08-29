@@ -66,7 +66,7 @@ su -
 ```
 # LAN
 auto eth0
-iface enp0s3 inet static
+iface eth0 inet static
 address 192.168.10.10/24
 gateway 192.168.10.1
 
