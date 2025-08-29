@@ -113,7 +113,9 @@ address 192.168.10.1/24
 hostnamectl set-hostname  gate.corp.loc
 ```
 14. Откройте в текстовом редакторе файл /etc/hosts.
-
+```
+nano /etc/hosts
+```
 15. Замените вторую строку на
 ```
 127.0.1.1 gate gate.corp.loc
