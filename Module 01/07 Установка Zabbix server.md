@@ -42,8 +42,9 @@ su -
 3. Устиановка MySQL для сервера Server
 ```
 apt update
-
-apt install default-mysql-server
+```
+```
+apt install default-mysql-server -y
 ```
 ### **Задача 2: Установка Zabbix server **
 
