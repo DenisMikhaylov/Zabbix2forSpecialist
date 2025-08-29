@@ -175,6 +175,12 @@ ip r
 sysctl -w net.ipv4.ip_forward=1
 ```
 3. Установка По для маршрутизации
+
+Редактируем файл 
+```
+nano /etc/apt/source.list
+```
+добавить решетку перед строкой с CDROM
 ```
 apt install iptables
 ```
