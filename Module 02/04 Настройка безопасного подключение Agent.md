@@ -35,7 +35,7 @@ password: password
 2. Получите права супер пользователя.
 
 ```
-student@server:~$ su -
+su -
 ```
 ```
 < Введите пароль пользователя student >
