@@ -84,7 +84,7 @@ ip a
 ```
 
 ```
-# nano /etc/network/interfaces
+nano /etc/network/interfaces
 ```
 ```
 # WAN
