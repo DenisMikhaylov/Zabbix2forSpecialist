@@ -1,0 +1,55 @@
+---
+Практическая работа:
+    Название: 'Настройка триггеров'
+    Действие: 'Модуль Второй'
+    Задача: 'Настройка триггеров'
+---
+# **Создание сервисов и сети предприятия**
+
+Этапы создания стенда:
+
+- Настройка триггеров
+
+Имена пользователей и пароли:
+```
+Для denian
+login: sa
+password: 111
+
+login: root 
+password: 111
+```
+```
+Для Windows
+login: Administrator
+password: Pa$$w0rd
+```
+### **Практическая работа**
+
+### **Задача 1: Настройка триггеров **
+1. Создание элемента триггер
+
+2.Перейти в меню 
+```
+Data collection -> Host
+```
+3. Найти host zabbix server
+4. Настроить простую проверку RDP
+```
+Host: Zabbix server
+...
+  Items
+    Name: Check rdp admin/host windows
+    Type: Simple check
+    Key: net.tcp.service[tcp,192.168.10.20,3389]
+```
+5. Нажать на кнопку triggers слева от имени 
+6. Нажимаем в верхнем правом углу 'Create trigger'
+7. Прописываем параметры 
+
+```
+    Name: RDP service on host is not available
+    Expression: last(/Zabbix server/net.tcp.service[tcp,192.168.10.20,3389])=0
+    Severity: Warning
+```
+
