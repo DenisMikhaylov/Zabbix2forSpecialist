@@ -79,12 +79,6 @@ systemctl enable zabbix-agent
 11. Проверить получение данных для Debian агента
 
 ```
-
-zabbix_get -s IP/DNSNAME  -p 10050 -k agent.version --tls-connect=psk --tls-psk-identity="Debian" --tls-cipher='ключ'
-
-```
-или если файл адеиный и скачен на сервер
-```
 zabbix_get -s IP/DNSNAME  -p 10050 -k agent.version --tls-connect=psk --tls-psk-identity="Debian" --tls-psk-file=<путь до psk файлв>
 ```
 12. Настроить работы на Zabbix server
