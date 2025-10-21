@@ -62,7 +62,7 @@ nano /etc/zabbix/zabbix_agentd.conf
 
 7. Меняем следующие значения:
 ```
-Server=192.168.10.10
+Server=<ip zabbix server>
 Hostname=Debian
 TLSAccept=psk
 TLSConnect=psk
