@@ -1,4 +1,35 @@
+---
+Практическая работа:
+    Название: 'Мониторинг Windows'
+    Действие: 'Модуль второй'
+    Задача: ' Кастомные проверки'
+---
+# **Расширение сбора информации**
 
+В данной практической работе мы добавим расширенный сбор данных для Windows.
+
+Этапы создания стенда:
+
+- Добавление расширенных проверок проверок
+
+
+Имена пользователей и пароли:
+```
+Для denian
+login: sa 
+password: 111
+
+login: root 
+password: 111
+```
+```
+Для Windows
+login: Administrator 
+password: Pa$$w0rd
+```
+### **Практическая работа**
+
+### **Задача 1: Внешние проверки с использованием ExternalScripts**
 
 
 
@@ -7,7 +38,7 @@
 В веб интерфейсе zabbix открывает "Data collection" - 'Host'
 
 ```
-Host: CLIENTN
+Host: Windows
 ...
   Items
     Name: Processor total
@@ -15,7 +46,7 @@ Host: CLIENTN
     Key: perf_counter_en["\Processor(_Total)\% Processor Time",60]
 ```
 ```
-Host: CLIENTN
+Host: Windows
 ...
   Items
     Name: Event 50 
@@ -23,7 +54,7 @@ Host: CLIENTN
     Key: eventlog[System,,"Warning",,50,,skip]
 ```
 ```
-Host: CLIENTN
+Host: Windows
 ...
   Items
     Name: Error drive
@@ -31,7 +62,7 @@ Host: CLIENTN
     Key: eventlog[System,,"Warning",,153,,skip]
 ```
 ```
-Host: CLIENTN
+Host: Windows
 ...
   Items
     Name: WMI object disk freespace
@@ -40,7 +71,7 @@ Host: CLIENTN
 
 ```
 ```
-Host: CLIENTN
+Host: Windows
 ...
   Items
     Name: WMI object version bios
@@ -49,7 +80,7 @@ Host: CLIENTN
 
 ```
 ```
-Host: CLIENTN
+Host: Windows
 ...
   Items
     Name: WMI object product baseboard
@@ -58,7 +89,7 @@ Host: CLIENTN
     Populates host inventory field: model
 ```
 ```
-Host: CLIENTN
+Host: Windows
 ...
   Items
     Name: WMI object serial number baseboard
@@ -93,19 +124,11 @@ Host: CLIENTN
 Значение: 5
 Описание: Минимальное свободное место в процентах
 ```
-Создание макросов для host, перейдите в меню data colliction >  hosts
 
-Выбрать host Gate, перейти на вкладку Macros
-
-Нажать add:
-```
-Макрос:{$THRESHOLD_WMI_LOW} 
-Значение: 10
-```
 
 Создание элемента с использованием макроса 
 ```
-Host: CLIENTN
+Host: Windows
 ...
   Items
     Name: WMI object disk c: freespace
