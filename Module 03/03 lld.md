@@ -153,7 +153,7 @@ chmod +x /etc/zabbix/dhcp-pools-shared-network.sh
 # /etc/zabbix/dhcp-pools-shared-network.sh LAN1 used
 ```
 
-Создаем  на Gate новый файл для агента.
+Создаем  на debian новый файл для агента.
 ```
 # nano  /etc/zabbix/zabbix_agentd.d/dhcp_stat.conf
 ```
