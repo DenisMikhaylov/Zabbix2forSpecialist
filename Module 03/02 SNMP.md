@@ -71,21 +71,20 @@ snmpwalk -On -c public -v2c <ip windows> 1
 snmpget -c public -v2c <ip windows> .1.3.6.1.2.1.1.5.0
 ```
 ```
-snmpget -c public -v2c <ip windows> SNMPv2-SMI::mib-2.1.5.0
+snmpget -c public -v2c <ip windows> 1.3.6.1.2.1.2.2.1.8
 ```
 ```
-snmpget -c public -v2c <ip windows> SNMPv2-MIB::sysName.0
+snmpget -c public -v2c <ip windows> 1.3.6.1.2.1.2.2.1.7
 ```
 ```
-snmpget -c public -v2c <ip windows> sysName.0
+snmpget -c public -v2c <ip windows> 1.3.6.1.2.1.1.1.0
 ```
 ```
-snmpwalk -c public -v2c <ip windows> sysName
+snmpwalk -c public -v2c <ip windows> 1.3.6.1.2.1.1.6.0
 ```
 Определение uptime устройства
 ```
-snmpget -c public -v2c <ip windows> sysUpTime.0
-
+snmpget -c public -v2c <ip windows> 1.3.6.1.2.1.1.3.0
 ```
 Получение mac address table
 ```
@@ -97,12 +96,12 @@ snmpget -c public -v2c <ip windows> .1.3.6.1.4.1.9.2.1.56.0
 ```
 Вывод списка интерфейсов устройства
 ```
-snmpwalk -c public -v2c -On <ip windows> ifDescr
+snmpwalk -c public -v2c -On <ip windows> 1.3.6.1.2.1.2.2.1.8
 ```
 
 Вывод количества байт, прошедших через порт устройства с момента его включения
 ```
-snmpget -c public -v2c -On <ip windows> ifInOctets.1
+snmpget -c public -v2c -On <ip windows> 1.3.6.1.2.1.2.2.1.8
 ```
 ```
 snmpget -c public -v2c -On <ip windows> ifHCInOctets.1
