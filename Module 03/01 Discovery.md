@@ -11,9 +11,6 @@ New Discovery rules
     SNMP community: public
     SNMP OID .1.3.6.1.2.1.1.5.0
 
-    Check type: Zabbix agent
-    key: system.uname
-
   Update interval: 3m
 
 
