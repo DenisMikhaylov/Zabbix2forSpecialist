@@ -10,7 +10,10 @@ New Discovery rules
     Check type: SNMPv2 agent 
     SNMP community: public
     SNMP OID .1.3.6.1.2.1.1.5.0
-    Add
+
+    Check type: Zabbix agent
+    key: system.uname
+
   Update interval: 3m
 
 
@@ -19,7 +22,8 @@ Alert->Actions-> Discovery action
   Create action
     Name: Action add snmp device to zabbix
     Conditions: 
-      Discovery status: equals Up                 
+      Discovery status: equals Up
+               
       Add
     Operations:
       Add host
@@ -29,4 +33,4 @@ Alert->Actions-> Discovery action
       Set host inventory mode: Automatic
     Add
 ```
-
+Добавить debian-3 в zabbix.
