@@ -32,10 +32,29 @@ password: Pa$$w0rd
 ### **Задача 1: SNMP**
 Подключаемся к серверу server
 
+Добавить в конец каждой строки в описание репозитариев слово non-free
+```
+nano /etc/apt/sources.list
+```
+```
+deb http://deb.debian.org/debian/ bookworm main non-free-firmware non-free
+deb-src http://deb.debian.org/debian/ bookworm main non-free-firmware non-free
 
+deb http://security.debian.org/debian-security bookworm-security main non-free-firmware non>
+deb-src http://security.debian.org/debian-security bookworm-security main non-free-firmware>
+
+# bookworm-updates, to get updates before a point release is made;
+# see https://www.debian.org/doc/manuals/debian-reference/ch02.en.html#_updates_and_backpor>
+deb http://deb.debian.org/debian/ bookworm-updates main non-free-firmware non-free
+deb-src http://deb.debian.org/debian/ bookworm-updates main non-free-firmware non-free
+
+```
 Установка snmp консоли
 ```
-apt install snmp
+apt update 
+```
+```
+apt install snmp snmp-mibs-downloader
 ```
 ```
 :> /etc/snmp/snmp.conf
