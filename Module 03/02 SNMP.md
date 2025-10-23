@@ -101,19 +101,10 @@ snmpwalk -c public -v2c -On <ip windows> 1.3.6.1.2.1.2.2.1.8
 
 Вывод количества байт, прошедших через порт устройства с момента его включения
 ```
-snmpget -c public -v2c -On <ip windows> 1.3.6.1.2.1.2.2.1.8
+snmpget -c public -v2c -On <ip windows> 1.3.6.1.2.1.2.2.1.10.7
 ```
 ```
-snmpget -c public -v2c -On <ip windows> ifHCInOctets.1
+snmpget -c public -v2c -On <ip windows> 1.3.6.1.2.1.2.2.1.16.7
 ```
-```
-snmpget -c public -v2c -On <ip windows> ifOutOctets.5
-```
-```
-snmpget -c public -v2c -On <ip windows> ifHCOutOctets.5
-```
-Информация по протоколу CDP
-```
-snmpwalk -c public -v2c <ip windows> .1.3.6.1.4.1.9.9.23.1.2.1.1
-```
+
 
