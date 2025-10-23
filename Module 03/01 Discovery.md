@@ -6,7 +6,7 @@ Discovery
 New Discovery rules
   Name: Local network new
   IP range: 192.168.1.1-254
-  Checks: 
+  Checks add: 
     Check type: SNMPv2 agent 
     SNMP community: public
     SNMP OID .1.3.6.1.2.1.1.5.0
@@ -20,7 +20,7 @@ Alert->Actions-> Discovery action
     Name: Action add snmp device to zabbix
     Conditions: 
       Discovery status: equals Up
-               
+      Received value equals server        
       Add
     Operations:
       Add host
@@ -30,4 +30,4 @@ Alert->Actions-> Discovery action
       Set host inventory mode: Automatic
     Add
 ```
-Добавить debian-3 в zabbix.
+Добавить debian-3 в zabbix. Включить правило добавление для linux
