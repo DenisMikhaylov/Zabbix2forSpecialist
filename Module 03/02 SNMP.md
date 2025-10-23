@@ -73,7 +73,10 @@ apt install snmp snmp-mibs-downloader
 
 На вкладке Агент SNMP выставить чекбокс для всех служб
 
-
+Получение списка всех параметров с хоста
+```
+snmpwalk -c public -v2c 192.168.1.104
+```
 Проверям на zabbix server
 
 ```
