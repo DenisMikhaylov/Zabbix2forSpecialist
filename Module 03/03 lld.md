@@ -52,7 +52,6 @@ Templates->Create template
       Name: disk {#NAME} read bytes
       Key: vfs.dev.read[{#NAME},sps]
       Type of information: Numeric (float)
-      Units: bite
       Preprocessing->
         Preprocessing steps
         Custom multiplier 512
@@ -60,7 +59,6 @@ Templates->Create template
       Name: disk {#NAME} write bytes
       Key: vfs.dev.write[{#NAME},sps]
       Type of information: Numeric (float)
-      Units: bite
       Preprocessing->
         Preprocessing steps
         Custom multiplier 512
