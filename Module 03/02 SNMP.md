@@ -88,11 +88,11 @@ snmpget -c public -v2c <ip windows> 1.3.6.1.2.1.1.3.0
 ```
 Получение mac address table
 ```
-snmpwalk -On -v2c -c public@101 <ip windows> 1.3.6.1.2.1.17.4.3.1.2
+snmpwalk -On -v2c -c public@101 <ip windows> 1.3.6.1.2.1.2.2.1.6
 ```
 Определение загрузки CPU устройства
 ```
-snmpget -c public -v2c <ip windows> .1.3.6.1.4.1.9.2.1.56.0
+snmpget -c public -v2c <ip windows> 1.3.6.1.2.1.25.3.3.1.2
 ```
 Вывод списка интерфейсов устройства
 ```
