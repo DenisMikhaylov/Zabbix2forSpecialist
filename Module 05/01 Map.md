@@ -59,6 +59,7 @@ Apply
 Link: add
 Links: Edit
 ```
+Добавить в поле label
 ```
 Out: {?last(/<имя хоста однорго из пар>/net.if.out["eth0"])}
 In: {?last(/<имя хоста однорго из пар>/net.if.in["eth0"])}
