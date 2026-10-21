@@ -30,8 +30,8 @@ password: password
 ### **Практическая работа**
 
 ### **Задача 1: Настройка подключения агента **
+0. Установить агента на Gate
 1. открыть веб инетерфейс Zabbix
-
 
 Применение  шаблона “Linux by Zabbix agent”
 
@@ -52,7 +52,7 @@ Monitoring->Hosts->Latest data
   Zoom: 1h
 ```
 ### **Задача 2: Добавление шаблонов Windows **
-
+0. Установить агента на Server Windows
 1. открыть веб инетерфейс Zabbix
 
 Применение шаблона “Windows by Zabbix agent”
